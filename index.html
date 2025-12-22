@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Warsztat AutoFix — mechanika samochodowa</title>
+  <meta name="description" content="Profesjonalny warsztat samochodowy — serwis, diagnostyka, wulkanizacja, przeglądy." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-row">
+      <div class="logo">AutoFix</div>
+      <nav class="main-nav" id="mainNav" role="navigation" aria-label="Główne menu" aria-hidden="true">
+        <a href="#home">Start</a>
+        <a href="#services">Usługi</a>
+        <a href="#about">O nas</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Otwórz menu"><span class="sr-only">Menu</span>☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <h1>AutoFix — Twój zaufany warsztat samochodowy</h1>
+        <p>Kompleksowe naprawy, diagnostyka i szybka obsługa. Umów wizytę już dziś!</p>
+        <a class="btn" href="#contact">Zarezerwuj</a>
+      </div>
+    </section>
+
+    <section id="services" class="container services">
+      <h2>Nasze usługi</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Mechanika</h3>
+          <p>Naprawy silnika, zawieszenia, wymiana oleju i części eksploatacyjnych.</p>
+        </article>
+        <article class="card">
+          <h3>Diagnostyka</h3>
+          <p>Komputerowa diagnostyka, odczyt błędów i precyzyjna lokalizacja usterek.</p>
+        </article>
+        <article class="card">
+          <h3>Wulkanizacja</h3>
+          <p>Wymiana opon, wyważanie, naprawa dętek i opon bezdemontażowych.</p>
+        </article>
+        <article class="card">
+          <h3>Przeglądy i serwis</h3>
+          <p>Przeglądy okresowe, przeglądy przed sprzedażą, serwis klimatyzacji.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h2>O nas</h2>
+      <p>Profesjonalny zespół z doświadczeniem, uczciwe ceny i szybkie terminy. Pracujemy na oryginalnych częściach i zapewniamy gwarancję na wykonane usługi.</p>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Kontakt</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p><strong>Adres:</strong> ul. Przykładowa 12, 00-001 Miasto</p>
+          <p><strong>Telefon:</strong> <a href="tel:+48123456789">+48 123 456 789</a></p>
+          <p><strong>Email:</strong> <a href="mailto:kontakt@autofix.pl">kontakt@autofix.pl</a></p>
+          <p><strong>Godziny otwarcia:</strong><br/>Pn-Pt 8:00–18:00, Sb 9:00–14:00</p>
+          <div class="map">
+            <!-- Możesz wkleić tu iframe z Google Maps ze swoim adresem -->
+            <iframe title="Mapa warsztatu" src="https://www.google.com/maps?q=Warsaw&output=embed" loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <label for="name">Imię i nazwisko</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="phone">Telefon</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <label for="service">Usługa</label>
+          <select id="service" name="service">
+            <option>Wybierz usługę</option>
+            <option>Mechanika</option>
+            <option>Diagnostyka</option>
+            <option>Wulkanizacja</option>
+            <option>Przegląd</option>
+          </select>
+
+          <label for="message">Wiadomość</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <button class="btn" type="submit">Wyślij zapytanie</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© AutoFix — Warsztat samochodowy. Wszystkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
+
+  <!-- Przypięty przycisk do dzwonienia -->
+  <a href="tel:+48123456789" class="call-button" id="callButton" aria-label="Zadzwoń do AutoFix">
+    <span class="call-icon">📞</span>
+    <span class="call-text">Zadzwoń</span>
+  </a>
+</body>
+</html>

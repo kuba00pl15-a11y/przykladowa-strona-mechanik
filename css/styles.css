@@ -1,0 +1,114 @@
+/* Podstawowe zmienne i reset */
+:root{
+  --accent:#0b74de;
+  --bg:#f6f8fb;
+  --text:#222;
+  --muted:#666;
+  --container:1100px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--bg)}
+.container{max-width:var(--container);margin:0 auto;padding:1rem}
+
+/* Nagłówek */
+.site-header{background:#fff;border-bottom:1px solid #e6e6e6;position:sticky;top:0;z-index:10}
+.nav-row{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:700;color:var(--accent);font-size:1.25rem}
+.main-nav a{margin-left:1rem;color:var(--text);text-decoration:none}
+.menu-toggle{display:none;background:none;border:0;font-size:1.5rem}
+
+/* Hero */
+.hero{padding:3rem 0;background:linear-gradient(90deg, #e9f3ff 0%, #fff 100%)}
+.hero-inner{text-align:center}
+.hero h1{font-size:2rem;margin:0 0 .5rem}
+.hero p{color:var(--muted);margin-bottom:1rem}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:.6rem 1rem;border-radius:6px;text-decoration:none}
+
+/* Usługi */
+.services{padding:2rem 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.card{background:#fff;padding:1rem;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+
+.about{padding:1rem 0}
+
+/* Kontakt */
+.contact{padding:2rem 0}
+.contact-grid{display:grid;grid-template-columns:1fr 360px;gap:1.5rem}
+.contact-info p{margin:.4rem 0;color:var(--muted)}
+.map iframe{width:100%;height:200px;border:0;border-radius:8px}
+.contact-form{background:#fff;padding:1rem;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.contact-form label{display:block;margin:.5rem 0 .25rem;font-size:.9rem}
+.contact-form input,.contact-form textarea,.contact-form select{width:100%;padding:.6rem;border:1px solid #ddd;border-radius:6px}
+.contact-form button{margin-top:.6rem}
+
+/* Stopka */
+.site-footer{background:#fff;border-top:1px solid #e6e6e6;padding:.75rem 0;margin-top:2rem}
+
+/* Responsywność */
+@media (max-width:800px){
+  .container{padding:0.75rem}
+  .hero{padding:2rem 0}
+  .hero h1{font-size:clamp(1.4rem,4vw,1.9rem)}
+  .hero p{font-size:0.95rem}
+
+  .contact-grid{grid-template-columns:1fr}
+
+  /* Mobile menu: hidden by default, shown when .open */
+  .main-nav{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#fff;padding:1rem;box-shadow:0 6px 20px rgba(0,0,0,.08);transform-origin:top;transition:transform .25s ease,opacity .2s ease;opacity:0;pointer-events:none;transform:translateY(-10px)}
+  .main-nav.open{opacity:1;pointer-events:auto;transform:translateY(0)}
+  .main-nav a{padding:.75rem 0;font-size:1.05rem}
+
+  .menu-toggle{display:block;background:transparent;border:0;padding:.4rem .6rem;border-radius:6px;font-size:1.5rem}
+  .grid{grid-template-columns:1fr}
+  .card{padding:1rem}
+  .contact-form{order:2}
+  .contact-info{order:1}
+  .map iframe{height:180px}
+  .btn{display:block;width:100%;padding:.9rem;text-align:center}
+} 
+
+/* Drobne ulepszenia */
+a{color:var(--accent)}
+
+/* Przypięty przycisk do dzwonienia */
+.call-button{
+  position:fixed;
+  right:1rem;
+  bottom:1rem;
+  background:var(--accent);
+  color:#fff;
+  padding:.75rem .9rem;
+  border-radius:999px;
+  box-shadow:0 6px 18px rgba(0,0,0,.18);
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  text-decoration:none;
+  z-index:9999;
+  font-weight:600;
+  transition:transform .18s ease,opacity .18s ease;
+}
+.call-button .call-icon{font-size:1.1rem}
+.call-button .call-text{display:inline-block}
+.call-button:focus{outline:3px solid rgba(11,116,222,.18);outline-offset:3px}
+
+/* Ukrycie przycisku przy przewijaniu w dół */
+.call-button.hidden{transform:translateY(70px);opacity:0;pointer-events:none}
+
+@media (min-width:900px){
+  /* Na większych ekranach pokazujemy tylko ikonę, mniej inwazyjnie */
+  .call-button{right:1.5rem;bottom:1.5rem;padding:.6rem}
+  .call-button .call-text{display:none}
+}
+
+
+/* Accessibility helper */
+.sr-only{
+  position:absolute !important;
+  width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+}
+
+/* Touch-friendly buttons */
+.menu-toggle{padding:.4rem .6rem;border-radius:6px}
+
+
