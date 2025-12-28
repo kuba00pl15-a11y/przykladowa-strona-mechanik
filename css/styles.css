@@ -70,38 +70,6 @@ html,body{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;color:var(--
 /* Drobne ulepszenia */
 a{color:var(--accent)}
 
-/* Przypięty przycisk do dzwonienia */
-.call-button{
-  position:fixed;
-  right:1rem;
-  bottom:1rem;
-  background:var(--accent);
-  color:#fff;
-  padding:.75rem .9rem;
-  border-radius:999px;
-  box-shadow:0 6px 18px rgba(0,0,0,.18);
-  display:flex;
-  align-items:center;
-  gap:.5rem;
-  text-decoration:none;
-  z-index:9999;
-  font-weight:600;
-  transition:transform .18s ease,opacity .18s ease;
-}
-.call-button .call-icon{font-size:1.1rem}
-.call-button .call-text{display:inline-block}
-.call-button:focus{outline:3px solid rgba(11,116,222,.18);outline-offset:3px}
-
-/* Ukrycie przycisku przy przewijaniu w dół */
-.call-button.hidden{transform:translateY(70px);opacity:0;pointer-events:none}
-
-@media (min-width:900px){
-  /* Na większych ekranach pokazujemy tylko ikonę, mniej inwazyjnie */
-  .call-button{right:1.5rem;bottom:1.5rem;padding:.6rem}
-  .call-button .call-text{display:none}
-}
-
-
 /* Accessibility helper */
 .sr-only{
   position:absolute !important;
